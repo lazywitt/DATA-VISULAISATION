@@ -2,6 +2,8 @@ import plotly.plotly
 import plotly.graph_objs as go
 plotly.tools.set_credentials_file(username='lazywitt', api_key='MPfLndpSv8GtOUZ8UaCb')
 
+#Please use yur own api key to run
+
 class visuals():
 
     def Solid_gauge(self,data_val=80, max_data_val=100 ,data_label='Closing_price'):
@@ -69,4 +71,7 @@ class visuals():
         fig = {"data": [base_chart, meter_chart],
                "layout": layout}
         plotly.plotly.iplot(fig, filename='gauge-meter-chart')
+if __name__=='__main__':
+    visual1=visuals()
+    visual1.Solid_gauge(69,100)
 
